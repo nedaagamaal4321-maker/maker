@@ -5,7 +5,12 @@ function press(value) {
     if (value === "Clear") {
         currentInput = "";
         display.value = "";
-    } else if (value === "=") {
+    } 
+    else if (value === "Back") {
+        currentInput = currentInput.slice(0, -1);
+        display.value = currentInput;
+    } 
+    else if (value === "=") {
         try {
             let expression = currentInput.replace(/X/g, "*").replace(/÷/g, "/").replace(/_/g, "-");
             let result = eval(expression);
@@ -15,7 +20,8 @@ function press(value) {
             display.value = "Error";
             currentInput = "";
         }
-    } else {
+    } 
+    else {
         if (value === "X") value = "*";
         if (value === "÷") value = "/";
         if (value === "_") value = "-";
