@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Calculator</title>
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <main class="container bg-dark w-50 ">
-     <header class="row mt-5" id="calculator">
-      <input type="text" class="col-12 bg-dark text-white fs-1" id="display" readonly>
-     </header>
-       
-       <section class="container pt-4 pb-4">
-       <div class="row justify-content-center mb-4">
-            <button class="col-2 col-lg-2 btn  bg-danger mx-2" onclick="press('7')">7</button>
-            <button class="col-2 col-lg-2 btn  bg-danger mx-2" onclick="press('8')">8</button>
-            <button class="col-2 col-lg-2 btn bg-danger mx-2" onclick="press('9')">9</button>
-            <button class="col-2 col-lg-2 btn  bg-danger mx-2" onclick="press('/')">÷</button>
-       </div>
-       
-       <div class="row justify-content-center mb-4">
-            <button class="col-2 col-lg-2 btn bg-danger mx-2" onclick="press('4')">4</button>
-            <button class="col-2 col-lg-2 btn  bg-danger mx-2" onclick="press('5')">5</button>
-            <button class="col-2 col-lg-2 btn  bg-danger mx-2" onclick="press('6')">6</button>
-            <button class="col-2 col-lg-2 btn  bg-danger mx-2" onclick="press('*')">*</button>
-       </div>
-        
-       <div class="row justify-content-center mb-4">
-            <button class="col-2 col-lg-2 btn bg-danger mx-2" onclick="press('1')">1</button>
-            <button class="col-2 col-lg-2 btn bg-danger mx-2" onclick="press('2')">2</button>
-            <button class="col-2 col-lg-2 btn bg-danger mx-2" onclick="press('3')">3</button>
-            <button class="col-2 col-lg-2 btn bg-danger mx-2" onclick="press('-')">-</button>
-       </div>
-        
-       <div class="row justify-content-center">
-            <button class="col-2 col-lg-2 bt bg-success text-white mx-2" id="clear" onclick="press('Clear')">Clear</button>
-            <button class="col-2 col-lg-2  bg-danger mx-2" onclick="press('0')">0</button>
-            <button class="col-2 col-lg-2 btn bg-success text-white mx-2" id="equal" onclick="press('=')">=</button>
-            <button class="col-2 col-lg-2  bg-danger mx-2" id="plus" onclick="press('+')">+</button>
-       </div>
-       </section>
-    </main>
+<body class="bg-secondary">
 
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
+  <main class="container bg-dark p-4 rounded-4 my-5" id="calculator">
+    <header class="row mb-3">
+      <input type="text" class="col-12 bg-dark text-white fs-1 text-end border-0" id="display" readonly>
+    </header>
+
+    <section class="container">
+       <div class="row justify-content-center mb-3">
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('Back')"><i class="fa-solid fa-rectangle-xmark"></i></button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('( )')">()</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('.')">.</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('%')">%</button>
+      </div>
+
+      <div class="row justify-content-center mb-3">
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('7')">7</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('8')">8</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('9')">9</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('/')">÷</button>
+      </div>
+
+      <div class="row justify-content-center mb-3">
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('4')">4</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('5')">5</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('6')">6</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('*')">*</button>
+      </div>
+
+      <div class="row justify-content-center mb-3">
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('1')">1</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('2')">2</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('3')">3</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('-')">-</button>
+      </div>
+
+      <div class="row justify-content-center mb-3">
+        <button class="col-2 col-md-2 btn bg-success text-white mx-1 my-1" onclick="press('Clear')">Clear</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('0')">0</button>
+        <button class="col-2 col-md-2 btn bg-success text-white mx-1 my-1" onclick="press('=')">=</button>
+        <button class="col-2 col-md-2 btn bg-danger mx-1 my-1" onclick="press('+')">+</button>
+      </div>
+      
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
 </body>
-</html
-
+</html>
